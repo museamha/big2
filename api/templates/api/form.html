@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Submit Your Feedback</h1>
+    <br/><br/>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h3>First name:{{form.First_Name}}</h3>
+            <h3>Middle name:{{form.Middle_Name}}</h3>
+            <h3>Last name:{{form.Last_Name}}</h3>
+            <h3>Email:{{form.Email}}</h3>
+            <h3>Phone number:{{form.Phone_Number}}</h3>
+            <h3>Service type:{{form.Service_Type}}</h3>
+            <h3>Location:{{form.Location}}</h3>
+            <h3>Details:{{form.details}}</h3>
+            <h2>agreeto our terms:</h2>
+            <h3>{{form.terms1}}Terms and Conditions 1</h3>
+            <h3>{{form.terms2}}Terms and Conditions 2</h3>
+            <h3>{{form.terms3}}Terms and Conditions 3</h3>
+            <input type="submit" value="Submit">
+        </form>
+    </form>
+</body>
+</html>
